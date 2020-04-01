@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     public int maxXPosition = 102;
 
     public string damagebleTargetTag = "";
+    public float damage = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.tag == damagebleTargetTag) {
             Stats enemyStats = other.gameObject.GetComponent<Stats>();
 
-            enemyStats.OnHit();
+            enemyStats.OnHit(damage);
         }
     }
 }
