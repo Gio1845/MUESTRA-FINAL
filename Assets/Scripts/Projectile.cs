@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
     public int maxXPosition = 102;
 
     public string damagebleTargetTag = "";
-    public float damage = 100f;
+    public float damage = 40f;
     // Start is called before the first frame update
     void Start()
     {
