@@ -145,4 +145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectileSpeed: 0.3
   maxXPosition: 102
-  damagebleTargetTag: 
+  damagebleTargetTag: Player
+  damage: 25

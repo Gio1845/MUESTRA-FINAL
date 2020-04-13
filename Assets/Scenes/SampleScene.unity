@@ -534,10 +534,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireDelay: 1
-  onFireProjectileCount: 3
+  onFireProjectileCount: 1
   projectile: {fileID: 2728698261097353820, guid: d67e88aea85c4894baea67efba02198c,
     type: 3}
-  movementSpeed: 0.04
+  movementSpeed: 0.03
 --- !u!95 &1710827795
 Animator:
   serializedVersion: 3
