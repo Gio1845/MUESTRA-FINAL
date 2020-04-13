@@ -34,13 +34,13 @@ public class Stats : MonoBehaviour
 
 
 
-    public void OnHit() {
+    public void OnHit(float damage) {
 
         Debug.Log("OnHit");
 
         // health = health - damageOnHit;
 
-        health -= damageOnHit;
+        health -= damage;
 
 
 

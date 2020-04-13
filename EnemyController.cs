@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour
 
         if (timeSinceLastFire >= fireDelay && projectilesFired < onFireProjectileCount)
         {
-            Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 100)));
+            Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 180)));
             projectile.GetComponent<Projectile>().damagebleTargetTag = "Player";
 
             projectilesFired++;
