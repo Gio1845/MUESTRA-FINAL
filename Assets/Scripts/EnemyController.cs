@@ -46,33 +46,36 @@ public class EnemyController : MonoBehaviour
 
         if (movingRight)
         {
-            // move right
+            // El enemigo se mueve a la derecha
             transform.Translate(new Vector2(movementSpeed, 0f));
 
             if (pos.x >= maxPositionX)
             {
-                // ahora se debe movel a la izquierda
+                // El enemigo se mueve  a la izquierda
                 movingRight = false;
             }
         }
         else
         {
-            // move left
+            // El enemigo se mueve a la izquierda
             transform.Translate(new Vector2(-movementSpeed, 0f));
 
             if (pos.x <= minPositionX)
             {
+                //El enemigo se mueve a la derecha
                 movingRight = true;
             }
         }
-
+        
+        //despues de un tiempo el enemigo dispara 
         if (timeSinceLastFire >= fireDelay && projectilesFired < onFireProjectileCount)
         {
             Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+            //aquien va a afectar el impacto osea a player
             projectile.GetComponent<Projectile>().damagebleTargetTag = "Player";
 
             projectilesFired++;
-
+            //el tiempo transcurrido para volver  disparar
             if(projectilesFired >= onFireProjectileCount)
             {
                 timeSinceLastFire = 0f;
