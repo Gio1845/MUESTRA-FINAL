@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Movimiento del personaje principal en un solo eje de manera vertical
         float VerticalMovement = Input.GetAxis("Vertical");
         if (VerticalMovement != 0)
         {
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
         //Solamente se puede disparar si ya paso el tiempo definido
         if (timeSinceLastFire >= fireDelay)
         {
-            //Can shoot
+            //Disparo despues de que haya pasado el tiempo definido
             if (Input.GetButton("Fire1"))
             {
                 Debug.Log("Pew");
